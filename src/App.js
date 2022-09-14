@@ -64,7 +64,7 @@ function App() {
     let count = 0;
     const dragDrop = (e, newStatus, color) => {
         count++;
-        console.log("drop");
+        // console.log("drop");
         let transferredData = e.dataTransfer.getData("todoId");
         // console.log(transferredData, "transferData");
         let newData = task.filter((el) => {
@@ -87,7 +87,8 @@ function App() {
     };
 
     // Handle Search Function
-    const handleSearch = () => {
+    const handleSearch = (e) => {
+        e.preventDefault();
         const searchData = task.filter((el) => el.content === search);
         if (searchData) {
             setIsLoading(true);
@@ -133,14 +134,14 @@ function App() {
                         Add
                     </button>
                 </div>
-                <div className="navbar__search">
+                <form className="navbar__search" onSubmit={ handleSearch }>
                     <span style={ { fontWeight: 500 } }>Search </span>
                     <input
                         placeholder="Search task"
                         onChange={ (e) => setSearch(e.target.value) }
                     />
-                    <button onClick={ handleSearch }>Search</button>
-                </div>
+                    <button type='submit' >Search</button>
+                </form>
             </div>
 
             <div className="container">
