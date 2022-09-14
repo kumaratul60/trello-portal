@@ -1,0 +1,122 @@
+.container {
+  text-align: center;
+  display: flex;
+  font-family: sans-serif;
+  margin-top: 15px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.task-box {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 10px;
+}
+
+.task-box > div {
+  width: 300px;
+  height: 500px;
+  margin-left: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+}
+
+.task-box > div:nth-child(1) {
+  background-color: rgb(241, 213, 161);
+}
+
+.task-box > div:nth-child(2) {
+  background-color: rgb(232, 232, 158);
+}
+
+.task-box > div:nth-child(3) {
+  background-color: rgb(184, 247, 184);
+}
+
+.navbar__task {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+  margin: 0px auto;
+
+  background: linear-gradient(
+    135deg,
+    rgba(123, 211, 232, 1) 0%,
+    rgba(232, 123, 165, 1) 0%,
+    #aa38c4 100%
+  );
+}
+
+.navbar__task > label {
+  margin-right: -50px;
+  margin-left: -50px;
+  font-weight: 500;
+}
+.navbar__task > input {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+.navbar__task > button {
+  width: 5rem;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(88, 187, 223);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.search_Box {
+  margin-left: 75px;
+  width: 300px;
+  height: 500px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.navbar__search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  gap: 35px;
+  background-color: #aa38c4;
+}
+
+.navbar__search > input {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.navbar__search > button {
+  margin: 10px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: yellowgreen;
+}
+.navbar__search > button:hover {
+  background-color: #3e8e41;
+}
+.navbar__search > button:active {
+  background-color: #3e8e41;
+  transition: all 0.8s;
+  transform: translateY(4px);
+}
